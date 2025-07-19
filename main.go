@@ -62,7 +62,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "1010"
+		port = "2020"
 	}
 	r.Run(":" + port)
 }

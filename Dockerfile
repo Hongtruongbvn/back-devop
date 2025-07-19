@@ -11,6 +11,6 @@ COPY . .
 
 RUN go build -o server .
 
-EXPOSE 1010
+EXPOSE 2020
 
 CMD ["./server"]
