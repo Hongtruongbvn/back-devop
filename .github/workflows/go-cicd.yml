@@ -8,9 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    env:
-      IMAGE: ${{ secrets.DOCKER_USERNAME }}/my-app:latest
-
     steps:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
@@ -31,6 +28,7 @@ jobs:
 
       - name: Tag & Push Docker image
         run: |
+          IMAGE=${{ secrets.DOCKER_USERNAME }}/my-app:latest
           docker tag my-app $IMAGE
           docker push $IMAGE
 
@@ -42,6 +40,7 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           port: ${{ secrets.VPS_PORT }}
           script: |
+            IMAGE=${{ secrets.DOCKER_USERNAME }}/my-app:latest
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker pull $IMAGE
             docker stop my-app || true
