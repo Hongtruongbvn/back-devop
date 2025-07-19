@@ -191,7 +191,7 @@ func FetchAndSaveGames(c *gin.Context) {
 
 			rawgID := int(gameMap["id"].(float64))
 			name := gameMap["name"].(string)
-
+			//dákjdhaksdasds
 			image := ""
 			if gameMap["background_image"] != nil {
 				image = gameMap["background_image"].(string)
