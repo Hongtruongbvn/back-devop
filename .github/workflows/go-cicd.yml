@@ -2,7 +2,7 @@ name: Go CI/CD
 
 on:
   push:
-    branches: [master] # Đổi thành 'main' nếu cần
+    branches: [main] # Đổi thành 'main' nếu cần
 
 jobs:
   deploy:
