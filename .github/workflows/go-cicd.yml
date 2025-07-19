@@ -7,11 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ./back-devop
-
     steps:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
