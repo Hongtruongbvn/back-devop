@@ -11,6 +11,6 @@ COPY . .
 
 RUN go build -o server .
 
-EXPOSE 9090
+EXPOSE 1010
 
 CMD ["./server"]

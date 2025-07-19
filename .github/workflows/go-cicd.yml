@@ -47,6 +47,6 @@ jobs:
             docker rm my-app || true
             docker run -d \
               --name my-app \
-              -p 9090:9090 \
+              -p 1010:1010 \
               --restart unless-stopped \
               $IMAGE
